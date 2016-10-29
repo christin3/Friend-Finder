@@ -1,0 +1,33 @@
+body{
+    background-color: darkgray;
+    margin-top: 100px;
+
+
+}
+.jumbotron{
+    background-color: whitesmoke;
+    font-family: 'Covered By Your Grace', cursive;
+    width: 75%;
+    margin-left: 12.5%;
+    /*margin-right: auto;*/
+
+
+}
+.btn{
+    color: red;
+    background-color: black;
+    font-size: large;
+}
+
+.glyphicon-fire{
+    color: red;
+}
+
+h1{
+    font-size: 70px;
+}
+
+footer{
+margin-left: 10%;
+}
+
