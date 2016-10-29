@@ -1,11 +1,14 @@
+
+
 //need to make compatibility data
 // ===============================================================================
 // LOAD DATA
 // We are linking our routes to a series of "data" sources.
 // These data sources hold arrays of information on table-data, waitinglist, etc.
 // ===============================================================================
+//export info from friends.js
+var friendsData = require('../data/friends.js');
 
-var friendData = require('../data/friends.js');
 
 // ===============================================================================
 // ROUTING
@@ -17,9 +20,6 @@ module.exports = function (app) {
     // In each of the below cases when a user visits a link
     // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
     // ---------------------------------------------------------------------------
-
-
-    var friends = [];
 
     app.get('/api/friends', function (req, res) {
 
@@ -37,7 +37,7 @@ module.exports = function (app) {
 
             res.json(false);
         } else {
-            res.json(friendData);
+            res.json(friends);
         }
 
 
@@ -56,6 +56,8 @@ module.exports = function (app) {
         friends.push(newFriend);
 
         res.json(newFriend);
+
+        console.log(friends[0].scores);
 
     });
 
